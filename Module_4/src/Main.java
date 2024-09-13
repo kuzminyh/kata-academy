@@ -1,3 +1,5 @@
+import X.X;
+
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -10,6 +12,16 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws Exception {
+
+
+        //5.1.9 2 ответа правильные
+//       Object obj = null;
+//        X x1 = (X) obj;
+//        Optional<X> x2 = Optional.empty();
+      //  boolean b1 = (obj instanceof Optional<X>);
+//        boolean b2 = (obj instanceof X);
+//        X x3 = new X();
+//        X xArr[] = new X[1];
 
 //4.2.6
 //        byte[] input = {1, 2, 4, 10, -4};
@@ -27,9 +39,9 @@ public class Main {
 //            System.out.println(byteIn);
 //        }
 //4.2.7
-//        InputStream stream = new ByteArrayInputStream(new byte[]{3, 10, 4, 5, 7});
-//        OutputStream outputStream = new ByteArrayOutputStream();
-//        print(stream, outputStream);
+        InputStream stream = new ByteArrayInputStream(new byte[]{3, 10, 4, 5, 7});
+        OutputStream outputStream = new ByteArrayOutputStream();
+        print(stream, outputStream);
 // 4.3.6
 //        byte[] bb = new byte[] {48, 49, 50, 51}; //0, 1, 2, 3
 //        ByteArrayInputStream bis = new ByteArrayInputStream(bb);
@@ -55,27 +67,29 @@ public class Main {
 //        scanner.close();
 // 4.4..6
 
-        byte[] intermediate = null;
-        try (
-                ByteArrayOutputStream output = new ByteArrayOutputStream();
-                ObjectOutputStream oos = new ObjectOutputStream(output)) {
-
-            oos.writeInt(3);
-            oos.writeObject(new Animal("Dog"));
-            oos.writeObject(new Animal("Cat"));
-            oos.writeObject(new Animal("Mouse"));
-
-            output.flush();
-            intermediate = output.toByteArray();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println(Arrays.toString(intermediate));
-        Animal[] animals = deserializeAnimalArray(intermediate);
-        System.out.println(Arrays.toString(animals));
+//        byte[] intermediate = null;
+//        try (
+//                ByteArrayOutputStream output = new ByteArrayOutputStream();
+//                ObjectOutputStream oos = new ObjectOutputStream(output)) {
+//
+//            oos.writeInt(3);
+//            oos.writeObject(new Animal("Dog"));
+//            oos.writeObject(new Animal("Cat"));
+//            oos.writeObject(new Animal("Mouse"));
+//
+//            output.flush();
+//            intermediate = output.toByteArray();
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println(Arrays.toString(intermediate));
+//        Animal[] animals = deserializeAnimalArray(intermediate);
+//        System.out.println(Arrays.toString(animals));
     }
+
+
 
 //4.4.6
 
@@ -143,6 +157,7 @@ public class Main {
             byte b = (byte) inputStream.read();
             if (b % 2 == 0) {
                 outputStream.write(b);
+                System.out.print(b);
             }
         }
         outputStream.flush();
