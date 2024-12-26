@@ -1,0 +1,4 @@
+rootProject.name = 'eureka-server-demo'
+includeBuild 'eureka-server'
+includeBuild 'eureka-client'
+includeBuild 'api-gateway-new'

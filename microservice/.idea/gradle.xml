@@ -4,11 +4,53 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/api-gateway-new" name="api-gateway-new">
+                <projects>
+                  <project path="$PROJECT_DIR$/api-gateway-new" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/eureka-client" name="eureka-client">
+                <projects>
+                  <project path="$PROJECT_DIR$/eureka-client" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/eureka-server" name="eureka-server">
+                <projects>
+                  <project path="$PROJECT_DIR$/eureka-server" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="corretto-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/api-gateway-new" />
+            <option value="$PROJECT_DIR$/eureka-client" />
+            <option value="$PROJECT_DIR$/eureka-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="gradleJvm" value="corretto-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/api-gateway" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway-new" />
+        <option name="gradleJvm" value="corretto-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/api-gateway-new" />
           </set>
         </option>
       </GradleProjectSettings>
